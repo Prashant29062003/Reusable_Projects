@@ -38,18 +38,13 @@
 
     // 
     function onStarOut(){
-        let localStorageRating = localStorage.getItem("rating");
-        if(localStorageRating){
-            highlightStars(localStorageRating);
-        }
+        highlightStars(localStorageRating);
     }
 
     function onStarSelected(e){
         selectedRating = parseInt(e.target.dataset.rating);
-        localStorage.setItem("rating",selectedRating);
-        let localRating = localStorage.getItem("rating");
-        displayRating.textContent = localRating;
-        highlightStars(localRating);
+        displayRating.textContent = selectedRating;
+        highlightStars(selectedRating);
     }
 
     // Event-Listning function using enevt delegation
@@ -79,11 +74,6 @@
     // main function
     function main(){
         createStars();
-        let localStorageRating = localStorage.getItem("rating");
-        if(localStorageRating){
-            highlightStars(localStorageRating);
-            displayRating.innerText = localStorageRating;
-        }
         attachEventListeners();
     }
     main();
