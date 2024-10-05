@@ -36,7 +36,7 @@
         }
     }
 
-    // 
+    // Star-leave effect
     function onStarOut(){
         let localStorageRating = localStorage.getItem("rating");
         if(localStorageRating){
@@ -44,6 +44,7 @@
         }
     }
 
+    // Star-clicked effect
     function onStarSelected(e){
         selectedRating = parseInt(e.target.dataset.rating);
         localStorage.setItem("rating",selectedRating);
@@ -71,10 +72,6 @@
             }
         })
     }
-
-    
-    
-
 
     // main function
     function main(){
