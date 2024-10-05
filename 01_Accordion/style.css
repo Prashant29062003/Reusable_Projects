@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  width: 100%;
+  background-color: #f3f3f3;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 100%;
+    width: 60%;
+    min-width: 600px;
+    border: 2px solid #666;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.head{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -2px;
+}
+.accordion_item{
+    border: 1px solid;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.accordion_title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: bakcground-color .3s ease;
+}
+.accordion_title:hover{
+    background-color: #e1e1e1;
+}
+
+.accordion_content{
+    display: none;
+    line-height: 1.4;
+    word-spacing: 4px;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: start;
+    border-top: 2px solid #666;
+    transition: width 2s ease-in-out;
+}
+.display_answer{
+    display: block;
+}
+
+.icon_rotate {
+    transform: rotate(180deg);
+}
+
