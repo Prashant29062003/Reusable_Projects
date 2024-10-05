@@ -36,11 +36,12 @@
         }
     }
 
-    // 
+    // Star-leave effect
     function onStarOut(){
         highlightStars(localStorageRating);
     }
 
+    // Star-clicked effect
     function onStarSelected(e){
         selectedRating = parseInt(e.target.dataset.rating);
         displayRating.textContent = selectedRating;
@@ -66,10 +67,6 @@
             }
         })
     }
-
-    
-    
-
 
     // main function
     function main(){
