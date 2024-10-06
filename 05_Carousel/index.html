@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          -webkit-font-smoothing: antialiased;
+        }
+        
+        body {
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+        }
+        
+        .container{
+            width:100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .slider-wrapper{
+            position: relative;
+            width: 75%;
+            min-width: 750px;
+            max-width: 90%;
+            height: 500px;
+            margin: 0px auto;
+        }
+        .slider{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-slide{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all .5s ease-in-out;
+        }
+        .image-slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .btn-slide:hover{
+            background-color: rgba(55, 55, 55, 0.287);
+            color: #fff;
+        }
+        .btn-slide{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 70px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            font-size: 34px;
+            color: rgba(255, 255, 255, 0.52);
+            z-index: 999;
+            cursor: pointer;
+        }
+        .btn-slide.prev{
+            left: 0;
+        }
+        .btn-slide.next{
+            right: 0;
+        }
+        .dots-container{
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(55, 55, 55, 0.187);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .dots-container .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(89, 88, 88, 0.529);
+        }
+        .dots-container .active{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Slider Sample</h1>
+        <div class="slider-wrapper">
+            <div class="slider">
+            
+            </div>
+            <button class="btn-slide prev">Prev</button>
+            <button class="btn-slide next">Next</button>
+            <div class="dots-container">
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
