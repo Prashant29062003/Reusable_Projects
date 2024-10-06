@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Dark</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        [data-theme = "dark"]{
+            --bg-color: #000;
+            --text-color: #fff;
+            --btn-text-color: #534;
+            --btn-bg-color: #ff4;
+        }
+
+        [data-theme = "light"]{
+            --bg-color: #fff;
+            --text-color: #000;
+            --btn-text-color: rgb(194, 247, 48);
+            --btn-bg-color: rgb(40, 87, 42);
+        }
+        
+        body {
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+        }
+        
+        .container {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 10px;
+      }
+      .themeBtn{
+            background-color: var(--btn-bg-color);
+        color: var(--btn-text-color);
+        outline: none;
+        border: 1px solid var(--text-color);
+        padding: 5px 10px;
+        font-weight: 500;
+        font-size: 1.23rem;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <div class="container" data-theme="dark">
+        <h1>Light and Dark Toggle</h1>
+        <button class="themeBtn">Change Theme</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
