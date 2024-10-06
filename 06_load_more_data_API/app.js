@@ -1,9 +1,12 @@
 const productsContainer = document.querySelector(".products-container");
 const loadBtn = document.querySelector('.load-btn');
 
-async function fetchListOfProducts(productLimit) {
+let currentStep = 0;
+let productLimit = 10
+
+async function fetchListOfProducts(productLimit,getCurrentStep) {
   try {
-    const response = await fetch(`https://dummyjson.com/products?limit=${productLimit}`, {
+    const response = await fetch(`https://dummyjson.com/products?limit=${productLimit}&skip=${getCurrentStep === 0 ? 0 : getCurrentStep * productLimit}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -14,7 +17,6 @@ async function fetchListOfProducts(productLimit) {
   }
 }
 
-fetchListOfProducts(6);
 function displayProducts(productList) {
     console.log(productList);
     productList.forEach((productItem)=>{
@@ -41,6 +43,13 @@ function displayProducts(productList) {
 
         productsContainer.appendChild(productItemWrapper);
     })
+    if(productsContainer.children.length === 100){
+      loadBtn.setAttribute("disabled","true");
+    }
 }
 
-loadBtn.addEventListener("click",() => fetchListOfProducts(10))
+fetchListOfProducts(productLimit,currentStep);
+
+loadBtn.addEventListener("click",() => {
+  fetchListOfProducts(productLimit,(currentStep += 1));
+})
