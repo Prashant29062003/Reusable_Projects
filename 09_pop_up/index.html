@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 10px;
+      }
+      .modal1,
+      .modal2 {
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #444;
+        padding: 25px;
+        max-width: 80vw;
+        max-height: 70vh;
+        background-color: beige;
+        color: #222;
+        z-index: 999;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        overflow-y: auto; /* Allow scrolling if content is too tall */
+        transition: all 0.7s cubic-bezier(0.43, 0.15, 0.28, 0.99);
+      }
+
+      .modal1 {
+        transition: all 0.7s cubic-bezier(0.43, 0.15, 0.28, 0.99);
+      }
+
+      .modal2 {
+        transform: translate(-50%, -50%);
+        display: none;
+        transition: all 0.9s ease-in-out;
+      }
+      /* Button Styling */
+      button {
+        padding: 10px 20px;
+        background-color: #444;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #555;
+        transform: translateY(-2px);
+      }
+      /* Modal close buttons */
+      .pop-up-btn-close,
+      .close-message-box {
+        margin-top: 20px;
+        background-color: #e74c3c;
+      }
+
+      .pop-up-btn-close:hover,
+      .close-message-box:hover {
+        background-color: #c0392b;
+      }
+
+      /* Full-screen dark background overlay when modal is open */
+      .modal-open.container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 998;
+        pointer-events: none; /* Ensure clicks go through to the modals or buttons */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal1">
+      <h1>MODAL_1: hay! there this is Prashant kumar.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nostrum
+        repudiandae voluptatibus.
+      </p>
+      <button class="pop-up-btn-close">close modal</button>
+    </div>
+    <div class="modal2">
+      <h1>MODAL_2: hay! there this is Prashant kumar.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nostrum
+        repudiandae voluptatibus.
+      </p>
+      <button class="close-message-box">close modal</button>
+    </div>
+    <div class="container">
+      <button class="pop-up-btn-open">open modal</button>
+      <button class="open-message-box">open message box</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
