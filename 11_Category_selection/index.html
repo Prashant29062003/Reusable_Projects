@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Selection</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      .display-box{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+      }
+      .filter-button-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .category-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+      }
+      .category-btn, .card{
+        padding: 5px 10px;
+        background-color: purple;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+      .card{
+        background-color: yellow;
+        color: #000;
+      }
+      .hide{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>filter cards by category</h1>
+        <div class="display-box">
+            <div class="filter-button-wrapper"></div>
+            <div class="category-content"></div>    
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
