@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+        .qr-container {
+            width: 400px; /* or any desired width */
+            height: 400px; /* or any desired height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000; /* Optional: to visualize the container */
+            display: none;
+        }
+        .error-msg-text {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QR-Code Generator</h1>
+        <input type="text" placeholder="Type text or use Url" class="qr-text">
+        <div class="error-msg-text"></div>
+        <div class="qr-container">
+            <canvas class="qr-canvas"></canvas>
+        </div>
+        <button class="generate-qr-code-btn">Generate QR-code</button>
+    </div>
+    
+
+    <!-- <script src="app.js" type="module"></script> -->
+    <script src="./python.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

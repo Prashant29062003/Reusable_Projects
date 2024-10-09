@@ -1,0 +1,18 @@
+{
+  "name": "12_qr-code-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^4.21.1",
+    "path": "^0.12.7",
+    "qrcode": "^1.5.4"
+  }
+}
