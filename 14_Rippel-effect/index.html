@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripple Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      .ripple-effect {
+        position: relative;
+        overflow: hidden;
+        padding: 10px 60px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 2rem;
+        letter-spacing: 2px;
+        border: 1px solid transparent;
+    }
+    .ripple-effect:hover {
+          border: 1px solid #ff5353;
+          color: #fff;
+          background-color: #ff5353;
+        
+      }
+      .para{
+        max-width: 100%;
+        width: 80%;
+        min-width: 200px;
+        text-align: center;
+        line-height: 30px;
+        letter-spacing: 1px;
+      }
+      .ripple-effect > span{
+        position: absolute;
+        background-color: rgba(255, 255, 255, .4);
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        animation: rippleEffectAnimation 1s linear infinite;
+      }
+      @keyframes rippleEffectAnimation {
+        0%{
+            height: 0;
+            width: 0;
+        }
+        100%{
+            width: 500px;
+            height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="ripple-effect">First Button</button>
+      <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab, saepe, odit autem laudantium voluptatibus expedita quibusdam, perferendis doloremque ipsum distinctio accusantium. In illo corrupti natus molestiae aut sint debitis provident facere iure! Dolores numquam ea exercitationem ad necessitatibus neque voluptas, deleniti quia tempora iure, ducimus consequatur tempore! Architecto sequi vero ratione laudantium necessitatibus ab! Enim ipsum, id repellendus nihil corporis quibusdam dolor dignissimos quae repellat dolore culpa aspernatur. Sapiente possimus, modi reiciendis rem facere sint libero error. Exercitationem, delectus? Sed optio enim nemo error quasi minima impedit veritatis sunt possimus, tempora libero praesentium dolor? Voluptatem possimus sapiente necessitatibus deleniti excepturi dolorem, non labore repellat! Nisi nesciunt, possimus excepturi, quis libero inventore, veniam quisquam totam error laudantium quos quaerat dicta quidem laboriosam exercitationem quas vel? Cum iste architecto perferendis vero aliquid ullam. Vero doloribus, recusandae accusantium deserunt iusto ea eligendi voluptatem quia velit numquam quas, sint aut cupiditate officiis soluta illum aliquam magni molestias reprehenderit excepturi error atque et nostrum doloremque! Quam magnam perferendis suscipit id voluptate asperiores nesciunt debitis corporis modi, sequi in neque. Animi facilis ab repellat, quidem officia culpa aspernatur necessitatibus cupiditate beatae enim! Facilis hic repudiandae voluptatem quasi nisi cumque soluta voluptates dolore, ad esse autem similique cum et tempore recusandae. Consequuntur, odio ad asperiores magni laboriosam itaque praesentium dolor quis consequatur placeat quidem officia ab ipsum et possimus exercitationem expedita harum quasi nam sit, accusantium velit dolorum cupiditate esse. Velit at fugiat, suscipit vitae rem reprehenderit laborum quo harum numquam voluptatem odio aspernatur deserunt atque dolore animi maiores maxime repellendus rerum totam ratione nulla blanditiis corrupti error? Tempore delectus eos vero maiores impedit quibusdam harum fugiat at voluptate tempora. Ducimus, pariatur! Illum, voluptatibus aut, blanditiis earum assumenda nostrum incidunt qui, maiores debitis ea odit. Cumque quibusdam voluptatibus amet, odit quod quis, temporibus ducimus assumenda eligendi nobis magnam! Atque nihil debitis, sunt a placeat cumque recusandae. Quas, natus perspiciatis quae exercitationem laboriosam ratione esse sequi corrupti, minus, nihil tempore quibusdam debitis excepturi culpa! Commodi quisquam veritatis facilis doloribus iste dolorem id fugit nisi vero eum vitae voluptas veniam reiciendis culpa ipsa nobis soluta esse, nam beatae illo velit. Corporis, labore. Sequi earum quibusdam dolor hic error excepturi totam. Repellendus veritatis hic velit sunt quasi ipsum explicabo odit quas. Molestias nostrum odit quidem dolore earum quo voluptas maxime architecto odio ullam optio assumenda, modi repudiandae veritatis cum non? Dicta id eaque harum provident error maxime, temporibus consequatur adipisci maiores! Porro facere corporis, tenetur error amet debitis architecto vel quisquam in illo doloribus numquam, nihil earum unde incidunt cupiditate libero ullam laudantium ab laborum, ad asperiores. Consequatur nostrum quasi ullam sit at consequuntur nulla explicabo, iure esse perferendis quos magni consectetur neque nobis dolores. Debitis aliquam molestias tempore incidunt, a beatae quo adipisci maiores quibusdam amet sed officiis quos facere, sunt neque sit labore doloremque magni temporibus exercitationem commodi praesentium quis ex odit! Autem veritatis fugit quae tempora corporis minus quibusdam, nulla, mollitia ea molestias ipsum deleniti voluptate quaerat omnis. Reiciendis, vero rerum. Distinctio, officia! Sapiente commodi reprehenderit molestias asperiores, culpa aspernatur eos quod nemo quaerat cumque iste, enim laborum odio natus sequi sit! Quasi hic perferendis blanditiis accusantium ipsum, praesentium, nam ducimus suscipit maxime, animi quo similique ea. Saepe assumenda, perspiciatis illum soluta est qui, similique voluptatem incidunt, quis totam neque itaque nobis praesentium esse expedita. Voluptatum distinctio vel laboriosam adipisci recusandae quaerat sapiente quae dolorem, reprehenderit nostrum, facere aperiam quidem sed libero repellendus aliquid placeat similique! Tempora dolores quia odit accusantium velit alias dolorem laborum iusto cupiditate dignissimos sit corrupti at nulla, recusandae quas sunt veritatis rerum ea minus vitae vero quasi ipsum possimus? Quod debitis autem quam, culpa iure similique est perspiciatis laudantium voluptate mollitia quas, delectus nulla, eligendi laborum! Iusto molestias obcaecati accusantium quo laboriosam soluta enim tempora inventore corrupti, rerum, quos eius sequi cum maxime neque iste harum ad. Iste est culpa consequuntur, optio adipisci explicabo facere dolorum delectus nesciunt? Alias libero quaerat quam sapiente! Enim eligendi esse officia? Hic optio, officiis quos cumque non commodi enim, praesentium ut maiores reiciendis, provident ipsum est quia atque doloremque suscipit. Sequi optio officia explicabo, at obcaecati rem veniam aut animi aliquam doloribus. Sint iusto dolorum dolor molestias earum repudiandae voluptas totam necessitatibus accusamus eveniet consequuntur eius distinctio, odio vero commodi neque beatae. Ipsam molestias, alias natus neque velit consequatur, laudantium nulla inventore tempora odio repellendus repudiandae maxime deserunt voluptatem iste labore? Suscipit sunt, repellat odio excepturi perspiciatis necessitatibus ex quibusdam aliquid deleniti assumenda! Qui ratione nesciunt voluptates minima dolore sit, voluptatibus impedit exercitationem est hic libero praesentium fugiat unde mollitia eos quibusdam ut, labore ea accusantium. Quam alias voluptas quidem, pariatur provident quisquam ex eius neque sunt perspiciatis sit rerum? Sunt nesciunt explicabo minima eaque. Fuga velit quos laudantium reprehenderit expedita debitis corporis officia quasi dicta autem omnis maiores, temporibus, quibusdam fugiat hic?</p>
+      <button class="ripple-effect">Second Button</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
