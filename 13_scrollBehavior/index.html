@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Behavior</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      .loader{
+        display: block;
+      }
+      .users-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .user-data{
+        list-style: none;
+        border: 1px solid;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .user-data .user-profile-name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .user-data .user-profile-name img{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scroll Behavior</h1>
+        <button class="scroll-top-to-bottom">Top to Bottom</button>
+        <div class="loader">Loading Data! Please wait <span class="dots"></span></div>
+        <ul class="users-list"></ul>
+        <button class="scroll-bottom-to-top">Bottom to top</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
