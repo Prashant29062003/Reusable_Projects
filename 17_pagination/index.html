@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pagination using JavaScript</h1>
+        <ul class="pagination-list" data-current-page="1"></ul>
+        <div class="pagination-container">
+            <button class="prev-btn pagination-btn">Previous</button>
+            <button class="pagination-numbers"></button>
+            <button class="next-btn pagination-btn">Next</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

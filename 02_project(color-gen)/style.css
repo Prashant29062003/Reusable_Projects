@@ -38,7 +38,7 @@ body {
 .color-box{
     width: 50%;
     height: calc(100vh - 20px);
-    background-color: #888;
+    background-color: rgba(235, 231, 234, 0.598);
     margin: 10px 10px 10px 5px;
     display: flex;
     align-items: center;

@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    width: 100%;
+  }
+  .container {
+    position: relative;
+    background: linear-gradient(135deg, #741577, #085f34);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .todo-container{
+      max-width: 100%;
+    width: 60%;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
+.todo-container .input-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    width: 90%;
+    white-space: none;
+}
+
+.todo-container .input-wrapper input{
+    max-width: 100%;
+    width: 80%;
+    outline: none;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #000;
+    margin-right: 10px;
+}
+.todo-container .input-wrapper button{
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #74157787;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+  .todo-list{
+      /* border: 1px solid #fff; */
+      width: 90%;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
+  }
+  .todo-list li{
+      width: 100%;
+      list-style: none;
+      /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 5px 40px;
+    position: relative;
+}
+.todo-list li .delete-item{
+    cursor: pointer;
+}
+.todo-list li .delete-item{
+
+}
+.todo-list li::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    top: 2.675px;
+    left: 0;
+    cursor: pointer;
+}
+.todo-list li::before:hover{
+    border-radius: 10px solid #555;
+    background-color: black;
+}
